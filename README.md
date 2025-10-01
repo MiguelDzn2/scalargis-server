@@ -79,6 +79,7 @@ GRANT ALL PRIVILEGES ON DATABASE scalargis TO postgres;
 
 ##### Linux
 > (venv) export PYTHONPATH=/<path\>/scalargis-server/scalargis:/<path\>/scalargis-server/scalargis/app  
+Para mim export PYTHONPATH=/home/miguel/GitHub/scalargis/scalargis-server/scalargis:/home/miguel/GitHub/scalargis/scalargis-server/scalargis/app
 > (venv) cd scalargis  
 > (venv) python3 app/main.py
 
