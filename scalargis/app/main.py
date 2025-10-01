@@ -197,3 +197,14 @@ def load_sample_data():
     load_sample_data()
 
     print('Sample data successfully loaded!')
+
+# Isto foi necessario porque e o ponto de entrada para correr o script Python diretamente.
+# Ou seja, quando fazemos "python3 main.py" estamos a executar diretamente, e não como módulo importado.
+# Sem isto o Python apenas definiria as funções e classes mas não executaria nenhum código,
+# resultando numa saída imediata para o terminal sem iniciar o servidor.
+# Se iniciarmos com cd scalargis/app seguido de python3 main.py, temos de colocar use_reloader=False.
+# Se iniciarmos com cd scalargis e python3 app/main.py podemos usar use_reloader=True 
+if __name__ == '__main__':
+    configure_app(app)
+    initialize_app(app)
+    app.run(host='0.0.0.0', port=5000, debug=True, use_reloader=True)
